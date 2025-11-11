@@ -1,0 +1,112 @@
+.home-container {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    overflow: hidden;
+    padding: 40px 0;
+  }
+
+
+  /* header  */
+  
+  h1 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff99;
+  }
+  
+  .video-row {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 30px 0;
+  }
+  /* header  */
+  .home-container h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 50px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /*  */
+  .video-track {
+    display: inline-flex;
+    animation: scroll-left 60s linear infinite; 
+  }
+  
+  .video-row.reverse .video-track {
+    animation: scroll-right 60s linear infinite;
+  }
+  
+  /* Pause animation when hovered */
+  .video-row:hover .video-track {
+    animation-play-state: paused;
+  }
+  
+  .video-wrapper {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .video-wrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  iframe {
+    width: 280px;
+    height: 160px;
+    margin: 0 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+    pointer-events: none; /* prevents the iframe from capturing clicks */
+  }
+  
+  /* Scroll Animations */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    iframe {
+      width: 200px;
+      height: 120px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

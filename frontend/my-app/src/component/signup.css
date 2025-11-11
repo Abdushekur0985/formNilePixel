@@ -1,0 +1,60 @@
+/* General responsive and adaptive styling */
+.form-container {
+  background-color: var(--form-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light/Dark mode adaptation */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --form-bg: #212529;
+    --text-color: #f8f9fa;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --form-bg: #f8f9fa;
+    --text-color: #212529;
+  }
+
+  .form-container {
+    color: var(--text-color);
+    background-color: var(--form-bg);
+  }
+
+  .text-light {
+    color: var(--text-color) !important;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 1.5rem !important;
+  }
+
+  img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+
+.spinner-border {
+    color: white;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .spinner-border {
+      color: #198754;
+    }
+  }
+  

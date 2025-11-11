@@ -1,0 +1,25 @@
+.dashboard-hero {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .dashboard-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dashboard-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  /*  */
+
+  
