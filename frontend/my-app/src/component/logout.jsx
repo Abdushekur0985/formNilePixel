@@ -16,7 +16,7 @@ function Logout() {
   const handleLogout = async () => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+      await axios.post("https://abdushekurs-tutor-hub.onrender.com/logout", {}, { withCredentials: true });
       toast.success("✅ Logged out successfully");
       navigate("/signup");
     } catch (err) {
