@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoginValidation from "./loginValidation";
-import axios from "axios";
+import axios from "axios"
 
 function Login() {
   const [value, setValue] = useState({ email: "", password: "" });
@@ -14,7 +14,7 @@ function Login() {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-  // ✅ Ensure cookies are sent with requests
+  //  Ensure cookies are sent with requests
   axios.defaults.withCredentials = true;
 
   const handleChange = (e) => {
@@ -38,7 +38,7 @@ function Login() {
     }
 
     try {
-      //  Send login request with credentials included
+      //  Send login request with credentials included.
       const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
